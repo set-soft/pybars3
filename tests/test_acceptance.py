@@ -2682,6 +2682,16 @@ class TestAcceptance(TestCase):
         result = u"**HTML** <a href='#'>link</a>"
         self.assertRender(template, context, result)
 
+    def test_existence_at_specific_index(self):
+        template = u"{{#if projects.[0].name}}{{projects.[0].name}}{{/if}}\n{{#if projects.1.name}}{{projects.1.name}}{{/if}}{{projects.2.name}}"
+        context = {
+            "projects": [{
+                "name": "web-app"
+            }]
+        }
+        result = u"web-app\n"
+        self.assertRender(template, context, result)
+
     def test_template(self):
         compiler = Compiler()
 
