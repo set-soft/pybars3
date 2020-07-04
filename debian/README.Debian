@@ -1,0 +1,7 @@
+pybars3 for Debian
+
+Pybars3 provides a template system for Python which is compatible with
+Handlebars.js. It is a fork of the pybars project that adds Python 3
+compatibility and numerous features from Handlebars.js 2.0.
+
+ -- Salvador E. Tropea <stropea@inti.gob.ar>  Fri, 03 Jul 2020 13:01:14 -0300
